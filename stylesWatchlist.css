@@ -49,92 +49,43 @@ header::before {
     margin: 0.35em 0 0 0;
 }
 
-/*==================
-SEARCH BAR
-==================*/
-.search-container {
-    width: 85%;
-    border: 2px solid #DFDDDD;
-    border-radius: 5px;
-    display: flex;
-    gap: 0.5em;
-    background-color: white;
-    position: absolute;
-    top: 27%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-
-.magnifying-class-btn,
-.search-input {
-    margin: 0.5em 0 0.5em 1em;
-    border: none;
-}
-
-.magnifying-class-btn{
-    background-color: white;
-}
-
-.fa-magnifying-glass {
-    font-size: 1.15rem;
-    color: lightslategray;
-}
-
-.search-input {
-    font-size: 0.85rem;
-    letter-spacing: 0.25px;
-    margin: 0;
-    color: #6B7280;
-    flex: 2;
-}
-
-.search-btn {
-    color: #374151;
-    background-color: #F9FAFB;
-    border: none;
-    flex: 1;
-    border-left: 2px solid #DFDDDD;
-    font-size: 0.95rem;
-    font-weight: 600;
-}
-
-.search-btn,
-.magnifying-class-btn {
-    cursor: pointer;
-}
-
 /*===================
-BEFORE SEARCH CONTAINER
+EMPTY LIST CONTAINER
 =====================*/
-
-.before-search-container,
-.unable-find-container {
+.empty-list-container {
+    display: flex;
     min-height: 60vh;
-    display: none;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.fa-film {
-    color: #DFDDDD;
-    font-size: 5rem;
-}
-.start-p,
-.unable-find {
+.empty-message {
     color: #DFDDDD;
     font-weight: bold;
     text-align: center;
+    margin: 0;
 }
 
-.unable-find-container {
+.add-movies {
+    margin: 1em;
     display: flex;
+    align-items: center;
+    gap: 0.75em;
 }
+
+.add-anchor:visited {
+    color: black;
+}
+
+.add-text {
+    font-weight: 600;
+}
+
 /*===================
 AFTER SEARCH CONTAINER
 =====================*/
-.after-search-container {
+.movies-list-container {
     margin: 3em;
     display: none;
     flex-direction: column;
@@ -210,18 +161,18 @@ AFTER SEARCH CONTAINER
     font-size: 0.8rem;
 }
 
-.add-watchlist {
+.remove-watchlist {
     display: flex;
     gap: 0.35em;
     align-items: center;
 }
 
-.fa-circle-plus {
+.fa-circle-minus {
     font-size: 1.1rem;
     cursor: pointer;
 }
 
-.add-text {
+.remove-text {
     font-size: 0.8rem;
     font-weight: 500;
 }

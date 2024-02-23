@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Watchlist</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesWatchlist.css">
     <!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--FONT FAMILY-->
@@ -14,28 +14,23 @@
 </head>
 <body>
     <header>
-        <h1 class="header-title">Find your film</h1>
-        <a class="header-anchor" href="myWatchlist.html">My Watchlist</a>
+        <h1 class="header-title">My Watchlist</h1>
+        <a class="header-anchor" href="index.html">Search for movies</a>
     </header>
-
-    <div class="search-container">
-        <button class="magnifying-class-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <input class="search-input" type="text" placeholder="Search for a movie">
-        <button class="search-btn" type="submit">Search</button>
-    </div>
     
     <main>
 
-        <div class="before-search-container">
-            <i class="fa-solid fa-film"></i>
-            <p class="start-p">Start exploring</p>
+        <div class="empty-list-container">
+            <p class="empty-message">Your watchlist is looking a little empty...</p>
+            <div class="add-movies">
+                <a class="add-anchor" href="index.html">
+                    <i class="fa-solid fa-circle-plus"></i>
+                </a>
+                <p class="add-text">Let's add some movies!</p>
+            </div>
         </div>
 
-        <div class="unable-find-container">
-            <p class="unable-find">Unable to find what you're looking for. Please try another search.</p>
-        </div>
-        
-        <div class="after-search-container">
+        <div class="movies-list-container">
             <div class="movie-container">
                 <div class="img-movie-container">
                     <img class="img-movie" src="img/firstMovie.png">
@@ -48,9 +43,9 @@
                     <div class="center-inner-movie">
                         <p class="duration">117 min</p>
                         <p class="topics">Action, Drama, Sci-fi</p>
-                        <div class="add-watchlist">
-                            <i class="fa-solid fa-circle-plus"></i>
-                            <p class="add-text">Watchlist</p>
+                        <div class="remove-watchlist">
+                            <i class="fa-solid fa-circle-minus"></i>
+                            <p class="remove-text">Remove</p>
                         </div>
                     </div>
                     <div class="bottom-inner-movie">
@@ -68,12 +63,12 @@
                         <h1 class="title">Blade Runner</h1>
                         <p class="stars">⭐ 8.1</p>
                     </div>
-                    <div class="center-inner-movie">
+                    <div class="center-inner-movie">    
                         <p class="duration">117 min</p>
                         <p class="topics">Action, Drama, Sci-fi</p>
-                        <div class="add-watchlist">
-                            <i class="fa-solid fa-circle-plus"></i>
-                            <p class="add-text">Watchlist</p>
+                        <div class="remove-watchlist">
+                            <i class="fa-solid fa-circle-minus"></i>
+                            <p class="remove-text">Remove</p>
                         </div>
                     </div>
                     <div class="bottom-inner-movie">
