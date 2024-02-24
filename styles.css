@@ -7,7 +7,7 @@ body {
     font-family: "Inter", sans-serif;
 }
 
-header{
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -120,12 +120,14 @@ BEFORE SEARCH CONTAINER
 .fa-film {
     color: #DFDDDD;
     font-size: 5rem;
+    cursor: pointer;
 }
 .start-p,
 .unable-find {
     color: #DFDDDD;
     font-weight: bold;
     text-align: center;
+    cursor: pointer;    
 }
 
 .unable-find-container {
@@ -232,5 +234,140 @@ AFTER SEARCH CONTAINER
     line-height: 1.5;
 }
 
+@media (min-width: 850px) {
+    body {
+        display: flex;
+    }
 
+    header {
+        flex: 1;
+        flex-direction: column;
+        padding: 4em 2em;
+        min-height: 100vh;
+        max-width: 50%;
+    }
+    .header-title {
+        white-space: nowrap;
+        font-size: 3rem;
+    }
+    .header-anchor {
+        font-size: 1.75rem;
+    }
 
+    .search-container {
+        width: 50%;
+        top: 50%;
+        right: 50%;
+        max-width: 600px;
+    }
+
+    main {
+        flex: 1;
+        max-width: 50%;
+        max-width:600px;
+        margin: 0 auto;
+    }
+
+    /*===================
+    BEFORE SEARCH CONTAINER
+    =====================*/
+    .before-search-container, 
+    .unable-find-container 
+    {
+    min-height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0 0 0;
+    }
+    .fa-film {
+        font-size: 6rem;
+    }
+
+    .unable-find,
+    .start-p {
+        font-size: 1.5rem;  
+    }
+
+    /*===================
+    AFTER SEARCH CONTAINER
+    =====================*/
+    .after-search-container {
+        display: flex;
+        margin: 1em 1.5em;
+    }
+    .movie-container {
+        height: 30vh;
+        min-height: 175px;
+    }
+
+    .title {
+        font-size: 1.35rem;
+    }
+
+    .stars {
+        font-size: 0.7rem;
+    }
+
+    .center-inner-movie {
+        width: 90%;
+    }
+
+    .duration, 
+    .topics {
+        font-size: 0.7rem;
+    }
+
+    .add-watchlist {
+        gap: 0.3em;
+    }
+
+    .fa-circle-plus {
+        font-size: 0.9rem;
+    }
+
+    .add-text {
+        font-size: 0.7rem;
+    }
+
+    .description {
+        font-size: 0.75rem; 
+    }
+}
+
+@media (min-width: 1200px) {
+    
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .stars {
+        font-size: 0.9rem;
+    }
+
+    .center-inner-movie {
+        width: 90%;
+    }
+
+    .duration, 
+    .topics {
+        font-size: 0.9rem;
+    }
+
+    .add-watchlist {
+        gap: 0.4em;
+    }
+
+    .fa-circle-plus {
+        font-size: 1rem;
+    }
+
+    .add-text {
+        font-size: 0.9rem;
+    }
+
+    .description {
+        font-size: 0.9rem; 
+    }
+}
