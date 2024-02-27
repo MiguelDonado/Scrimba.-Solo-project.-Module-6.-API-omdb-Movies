@@ -17,10 +17,8 @@
         <h1 class="header-title">My Watchlist</h1>
         <a class="header-anchor" href="index.html">Search for movies</a>
     </header>
-    
     <main>
-
-        <div class="empty-list-container">
+        <div class="empty-list-container" id="empty-list-container">
             <p class="empty-message">Your watchlist is looking a little empty...</p>
             <div class="add-movies">
                 <a class="add-anchor" href="index.html">
@@ -29,58 +27,9 @@
                 <p class="add-text">Let's add some movies!</p>
             </div>
         </div>
-
-        <div class="movies-list-container">
-            <div class="movie-container">
-                <div class="img-movie-container">
-                    <img class="img-movie" src="img/firstMovie.png">
-                </div>
-                <div class="inner-movie-container">
-                    <div class="top-inner-movie">
-                        <h1 class="title">Blade Runner</h1>
-                        <p class="stars">⭐ 8.1</p>
-                    </div>
-                    <div class="center-inner-movie">
-                        <p class="duration">117 min</p>
-                        <p class="topics">Action, Drama, Sci-fi</p>
-                        <div class="remove-watchlist">
-                            <i class="fa-solid fa-circle-minus"></i>
-                            <p class="remove-text">Remove</p>
-                        </div>
-                    </div>
-                    <div class="bottom-inner-movie">
-                        <p class="description">A blade runner must pursue and terminate four replicants 
-                            who stole a ship in space, and have returned to Earth to find their creator.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="movie-container">
-                <div class="img-movie-container">
-                    <img class="img-movie" src="img/firstMovie.png">
-                </div>
-                <div class="inner-movie-container">
-                    <div class="top-inner-movie">
-                        <h1 class="title">Blade Runner</h1>
-                        <p class="stars">⭐ 8.1</p>
-                    </div>
-                    <div class="center-inner-movie">    
-                        <p class="duration">117 min</p>
-                        <p class="topics">Action, Drama, Sci-fi</p>
-                        <div class="remove-watchlist">
-                            <i class="fa-solid fa-circle-minus"></i>
-                            <p class="remove-text">Remove</p>
-                        </div>
-                    </div>
-                    <div class="bottom-inner-movie">
-                        <p class="description">A blade runner must pursue and terminate four replicants 
-                            who stole a ship in space, and have returned to Earth to find their creator.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <div class="movies-list-container" id="movies-list-container"></div>
     </main>
     
-    <script src="index.js"></script>
+    <script src="myWatchlist.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
+    height: 100%;
 }
 
 header{
@@ -53,8 +54,8 @@ header::before {
 EMPTY LIST CONTAINER
 =====================*/
 .empty-list-container {
-    display: none;
     min-height: 60vh;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -87,7 +88,7 @@ MOVIES LIST CONTAINER
 =====================*/
 .movies-list-container {
     margin: 3em;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -110,6 +111,7 @@ MOVIES LIST CONTAINER
     display: block;
     max-height: 100%;
     min-height: 100%;
+    max-width: 115px;
 }
 
 .inner-movie-container {
@@ -117,7 +119,7 @@ MOVIES LIST CONTAINER
     display: flex;
     flex-direction: column;
     gap: 1em;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .title,
@@ -181,11 +183,14 @@ MOVIES LIST CONTAINER
     color: #707070;
     font-size: 0.9rem;
     line-height: 1.5;
+    min-height: 75px;
+    max-height: 15vh;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 780px) {
     body {
         display: flex;
+        min-height: 500px;
     }
 
     header {
@@ -194,6 +199,7 @@ MOVIES LIST CONTAINER
         padding: 4em 2em;
         min-height: 100vh;
         max-width: 50%;
+        height: initial;
     }
     .header-title {
         white-space: nowrap;
@@ -201,6 +207,8 @@ MOVIES LIST CONTAINER
     }
     .header-anchor {
         font-size: 1.75rem;
+        position: absolute;
+        top: 90vh;
     }
 
     main {
@@ -218,7 +226,7 @@ MOVIES LIST CONTAINER
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2em;
+    padding: 2em 0 0 0;
     }
     .empty-message {
         font-size: 1.85rem;
@@ -244,7 +252,7 @@ MOVIES LIST CONTAINER
         margin: 1em 1.5em;
     }
     .movie-container {
-        height: 30vh;
+        height: initial;
         min-height: 175px;
     }
     
