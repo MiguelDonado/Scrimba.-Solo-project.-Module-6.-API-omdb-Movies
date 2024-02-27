@@ -5,6 +5,7 @@
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
+    height: 100%;
 }
 
 header {
@@ -66,7 +67,6 @@ SEARCH BAR
     margin: 0 auto;
 }
 
-.magnifying-class-btn,
 .search-input {
     margin: 0.5em 0 0.5em 1em;
     border: none;
@@ -74,6 +74,8 @@ SEARCH BAR
 
 .magnifying-class-btn{
     background-color: white;
+    padding: 0.5em 1em;
+    border: none;
 }
 
 .fa-magnifying-glass {
@@ -117,6 +119,10 @@ BEFORE SEARCH CONTAINER
     align-items: center;
 }
 
+.before-search-container {
+    display: flex;
+}
+
 .fa-film {
     color: #DFDDDD;
     font-size: 5rem;
@@ -130,9 +136,6 @@ BEFORE SEARCH CONTAINER
     cursor: pointer;    
 }
 
-.unable-find-container {
-    display: flex;
-}
 /*===================
 AFTER SEARCH CONTAINER
 =====================*/
@@ -161,6 +164,7 @@ AFTER SEARCH CONTAINER
     display: block;
     max-height: 100%;
     min-height: 100%;
+    max-width: 115px;
 }
 
 .inner-movie-container {
@@ -168,7 +172,7 @@ AFTER SEARCH CONTAINER
     display: flex;
     flex-direction: column;
     gap: 1em;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .title,
@@ -232,11 +236,15 @@ AFTER SEARCH CONTAINER
     color: #707070;
     font-size: 0.9rem;
     line-height: 1.5;
+    min-height: 75px;
+    max-height: 15vh;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 780px) {
+
     body {
         display: flex;
+        min-height: 500px;
     }
 
     header {
@@ -245,13 +253,17 @@ AFTER SEARCH CONTAINER
         padding: 4em 2em;
         min-height: 100vh;
         max-width: 50%;
+        height: initial;
     }
+
     .header-title {
         white-space: nowrap;
         font-size: 3rem;
     }
     .header-anchor {
         font-size: 1.75rem;
+        position: absolute;
+        top: 90vh;
     }
 
     .search-container {
@@ -275,7 +287,6 @@ AFTER SEARCH CONTAINER
     .unable-find-container 
     {
     min-height: 100vh;
-    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -294,11 +305,10 @@ AFTER SEARCH CONTAINER
     AFTER SEARCH CONTAINER
     =====================*/
     .after-search-container {
-        display: flex;
         margin: 1em 1.5em;
     }
     .movie-container {
-        height: 30vh;
+        height: initial;
         min-height: 175px;
     }
 
