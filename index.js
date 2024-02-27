@@ -2,6 +2,7 @@ const searchInputEl = document.getElementById('search-input')
 const afterSearchContainer = document.getElementById('after-search-container')
 const beforeSearchContainer = document.getElementById('before-search-container')
 const unableFindContainer = document.getElementById('unable-find-container')
+let moviesHtmlArray = []
 let moviesHtml = `` 
 let myWatchlist = []
 
@@ -42,6 +43,7 @@ function loadJsonSearch() {
     afterSearchContainer.style.display = 'flex'
     afterSearchContainer.innerHTML = ``
     moviesHtml = `` 
+    moviesHtmlArray = []
     return fetch(`http://www.omdbapi.com/?apikey=858c0a0a&s=${searchInputEl.value}&type=movie`)
     .then(response => response.json())
     .then(data => getImdbIdsSearch(data))
@@ -58,6 +60,10 @@ function getImdbIdsSearch (arraySearch) {
 }
 function renderMovies (moviesId) {
     return Promise.all(moviesId.map(renderMovie)).then(() => {
+        moviesHtmlArray.sort(function(a, b) {
+            return b[0] - a[0];
+        })
+        moviesHtml = moviesHtmlArray.map(item => item[1]).join('')
         afterSearchContainer.innerHTML = moviesHtml;
     });
 }
@@ -66,7 +72,7 @@ function renderMovie (movieId) {
     return fetch(`http://www.omdbapi.com/?apikey=858c0a0a&i=${movieId}`)
         .then(response => response.json())
         .then(data => {
-            moviesHtml+= `
+            moviesHtml= `
         <div class="movie-container">
             <div class="img-movie-container">
                 <img class="img-movie" src="${data.Poster}">
@@ -90,6 +96,11 @@ function renderMovie (movieId) {
                     </div>
                     </div>
         `
+        moviesHtmlArray.push([convertToNumber(data.imdbVotes), moviesHtml])
     })
+}
+
+function convertToNumber (movieVotes) {
+    return Number(movieVotes.replace(/,/g, ''));
 }
 

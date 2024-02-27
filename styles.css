@@ -43,13 +43,16 @@ header::before {
     z-index: 1;
     position: relative;
     color: white;
-    text-decoration: none;
     font-weight: bold;
     letter-spacing: 1px;
     font-size: 1.25rem;
     margin: 0.35em 0 0 0;
 }
 
+.header-anchor:hover {
+    color: red;
+    transform: scale(1.5);
+}
 /*==================
 SEARCH BAR
 ==================*/
@@ -153,6 +156,8 @@ AFTER SEARCH CONTAINER
     padding: 1.25em 0;
     gap: 1.25em;
     border-bottom: 2px solid #E9E2E2;
+    height: initial;
+    min-height: 175px;
 }
 
 .img-movie-container {
@@ -165,6 +170,7 @@ AFTER SEARCH CONTAINER
     max-height: 100%;
     min-height: 100%;
     max-width: 115px;
+    min-width: 110px;
 }
 
 .inner-movie-container {
@@ -238,6 +244,7 @@ AFTER SEARCH CONTAINER
     line-height: 1.5;
     min-height: 75px;
     max-height: 15vh;
+    overflow: hidden;
 }
 
 @media (min-width: 780px) {
@@ -306,10 +313,6 @@ AFTER SEARCH CONTAINER
     =====================*/
     .after-search-container {
         margin: 1em 1.5em;
-    }
-    .movie-container {
-        height: initial;
-        min-height: 175px;
     }
 
     .title {

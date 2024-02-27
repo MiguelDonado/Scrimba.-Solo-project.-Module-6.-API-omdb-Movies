@@ -55,8 +55,11 @@ function renderListMovies() {
     if (myWatchlist.length) {
         emptyListContainer.style.display = 'none'
         moviesListContainer.style.display = 'flex'
-        renderMovies(moviesID)
+    }else {
+        emptyListContainer.style.display = 'flex'
+        moviesListContainer.style.display = 'none'
     }
+    renderMovies(moviesID)
 }
 
 
