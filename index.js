@@ -18,8 +18,14 @@ document.addEventListener('click', function (e){
         alert('A movie has been added to your watchlist.')
     }else if (e.target.id === "header-anchor") {
         e.preventDefault()
-        moviesAlreadyInLocalStorage = JSON.parse(localStorage.getItem('myWatchlist'))
-        listMoviesToSet = convertToSet([...moviesAlreadyInLocalStorage, ...myWatchlist])
+        try {
+            moviesAlreadyInLocalStorage = JSON.parse(localStorage.getItem('myWatchlist'))
+            listMoviesToSet = convertToSet([...moviesAlreadyInLocalStorage, ...myWatchlist])
+        }
+        catch (err){
+            moviesAlreadyInLocalStorage = []
+            listMoviesToSet = myWatchlist
+        }
         localStorage.setItem('myWatchlist',JSON.stringify(listMoviesToSet))
         window.location.href = e.target.href
     }else if (e.target.id === "search-btn" || e.target.id === "magnifying-class-btn" ) {
