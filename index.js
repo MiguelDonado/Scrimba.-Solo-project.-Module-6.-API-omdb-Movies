@@ -44,7 +44,7 @@ function loadJsonSearch() {
     afterSearchContainer.innerHTML = ``
     moviesHtml = `` 
     moviesHtmlArray = []
-    return fetch(`http://www.omdbapi.com/?apikey=858c0a0a&s=${searchInputEl.value}&type=movie`)
+    return fetch(`https://www.omdbapi.com/?apikey=858c0a0a&s=${searchInputEl.value}&type=movie`)
     .then(response => response.json())
     .then(data => getImdbIdsSearch(data))
     .then(ids => renderMovies(ids))
@@ -69,7 +69,7 @@ function renderMovies (moviesId) {
 }
 
 function renderMovie (movieId) {
-    return fetch(`http://www.omdbapi.com/?apikey=858c0a0a&i=${movieId}`)
+    return fetch(`https://www.omdbapi.com/?apikey=858c0a0a&i=${movieId}`)
         .then(response => response.json())
         .then(data => {
             moviesHtml= `

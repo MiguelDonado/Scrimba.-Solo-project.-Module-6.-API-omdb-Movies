@@ -18,7 +18,7 @@ function renderMovies (moviesId) {
 }
 
 function renderMovie (movieId) {
-    return fetch(`http://www.omdbapi.com/?apikey=858c0a0a&i=${movieId}`)
+    return fetch(`https://www.omdbapi.com/?apikey=858c0a0a&i=${movieId}`)
         .then(response => response.json())
         .then(data => {
         moviesHtml+= `
